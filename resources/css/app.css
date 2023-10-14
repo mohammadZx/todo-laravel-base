@@ -1,0 +1,75 @@
+@import 'bootstrap';
+@import 'font-awesome';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.main-section {
+    min-height: 100vh;
+}
+
+.todo-container {
+    position: relative;
+    max-width: 600px;
+    min-width: 600px;
+}
+
+.todo-list {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.todo-list__item {
+    position: relative;
+    border: 1px solid var(--bs-gray-200);
+    background-color: var(--bs-white);
+    border-radius: 0.35rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease-in;
+}
+
+.todo-list__item:hover {
+    background-color: var(--bs-gray-300);
+    box-shadow: none !important;
+}
+
+
+.todo-list__item .__buttons .__complete,
+.todo-list__item .__buttons .__delete {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e6e6e6;
+    transition: all 0.3s ease-in;
+}
+
+.todo-list__item .__buttons .__complete:hover {
+    background-color: var(--bs-success);
+    color: var(--bs-white)
+}
+
+.todo-list__item .__buttons .__delete:hover {
+    background-color: var(--bs-danger);
+    color: var(--bs-white)
+}
+
+.todo-list__item.completed {
+    background-color: var(--bs-gray-500);
+    border-color: var(--bs-gray-500);
+    opacity: 0.5;
+    text-decoration: line-through;
+    user-select: none;
+}
